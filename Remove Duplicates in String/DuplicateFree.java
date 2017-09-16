@@ -18,7 +18,8 @@ public class UniqueChara {
 					if(ch1==ch2)
 					{
 						s=s.replaceFirst(Character.toString(ch2),"");
-						i--;
+						if(i>0)i--;
+						j--;
 					}
 				}
 			}
@@ -30,7 +31,7 @@ public class UniqueChara {
 	
 	public static void main(String args[])
 	{
-		String s="abdcddcea";
+		String s="aaabbb";
 		UniqueChara obj = new UniqueChara();
 		System.out.println(obj.isUnique(s));
 	}
